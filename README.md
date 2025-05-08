@@ -1,5 +1,9 @@
 # The Atomic Blog
 
+## 📸 Preview
+![lightMode](public/websiteWithLightMode.png)
+![darkMode](public/websiteWithDarkMode.png)
+
 ## Project Overview
 
 The Atomic Blog is a React application that demonstrates the use of React Context API for state management. It's a simple blog platform where users can:
