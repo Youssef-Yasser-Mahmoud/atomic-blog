@@ -1,7 +1,15 @@
 # The Atomic Blog
 
 ## 📸 Preview
+
+`Light Mode`
+
 ![lightMode](public/websiteWithLightMode.png)
+
+---
+
+`Dark Mode`
+
 ![darkMode](public/websiteWithDarkMode.png)
 
 ## Project Overview
