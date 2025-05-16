@@ -5,13 +5,13 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
 
   color: #222;
   line-height: 1.25;
   background: #fff;
-  padding: 32px;
+  padding: 32px 16px;
 }
 
 .fake-dark-mode {
@@ -28,11 +28,13 @@ body {
   font-size: 26px;
   background-color: #ffe8cc;
   border: none;
+  z-index: 999;
 }
 
 section {
   max-width: 1140px;
   margin: 0 auto;
+  width: 100%;
 }
 
 header {
@@ -41,6 +43,8 @@ header {
 
   justify-content: space-between;
   display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 h1 {
@@ -69,8 +73,9 @@ h3 {
 
 header div {
   display: flex;
-  gap: 32px;
+  gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 header button {
@@ -81,7 +86,8 @@ form {
   padding: 24px;
   background-color: #fff4e6;
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
   margin-bottom: 40px;
 }
 
@@ -105,7 +111,8 @@ button {
 }
 
 input {
-  width: 12rem;
+  width: 100%;
+  max-width: 12rem;
 }
 
 *::placeholder {
@@ -120,6 +127,7 @@ input {
 textarea {
   flex: 1;
   height: 50px;
+  width: 100%;
 }
 
 button {
@@ -139,8 +147,8 @@ h3 {
 main ul {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 main li {
@@ -164,8 +172,8 @@ aside li {
   border: 1px solid #ffe8cc;
   padding: 4px 8px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 8px;
 }
 
 h2 + button {
@@ -175,4 +183,48 @@ h2 + button {
 aside li button {
   padding: 4px 8px;
   font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (min-width: 480px) {
+  main ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  form {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+  }
+
+  main ul {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px;
+  }
+
+  aside li {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body {
+    padding: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 32px;
+  }
 }
